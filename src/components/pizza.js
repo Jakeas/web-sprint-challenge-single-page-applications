@@ -1,6 +1,7 @@
 import React from 'react'
 import Confirm from './Confirm'
 import { useHistory, Switch, Route } from 'react-router-dom'
+import styled from 'styled-components'
 
 function Pizza(props) {
 
@@ -18,34 +19,27 @@ function Pizza(props) {
         change(name, valueToUse)
     }
 
-    const history = useHistory()
-
-    const routeToConfirm = () => {
-    console.log(history);
-    history.push('/Confirm')
-  }
-
     return (
-        <form onSubmit={onSubmit}>
+        <Form onSubmit={onSubmit}>
             <div>
-                <h1>Steampunk Pizza</h1>
-                <h2>Pizza Preferences</h2>
+                <H1>Steampunk Pizza</H1>
+                <H2>Pizza Preferences</H2>
             </div>
             <div >
-            <div>
-                <div>{errors.first_name}</div>
-                <div>{errors.size}</div>
-                <div>{errors.instruct}</div>
-            </div>
-                <label>First Name
+                <div>
+                    <div>{errors.first_name}</div>
+                    <div>{errors.size}</div>
+                    <div>{errors.instruct}</div>
+                </div>
+                <Label>First Name
                     <input
                         type='text'
                         name='first_name'
                         onChange={onChange}
                         value={values.first_name}
                     />
-                </label>
-                <label>
+                </Label>
+                <Label> Pie Size
                     <select
                         name='size'
                         onChange={onChange}
@@ -57,41 +51,42 @@ function Pizza(props) {
                     <option value='Large'>Large</option>
                     <option value='Gigantic'>Gigantic</option>
                     </select>
-                </label>
-                <h2>Toppings</h2>
-                <label>Mushrooms
+                </Label>
+                <H2>Toppings</H2>
+                <Label>Mushrooms
                     <input 
                         type='checkbox'
                         name='mushrooms'
                         onChange={onChange}
                         checked={values.mushrooms}
                     />
-                </label>
-                <label> Cheese
+                </Label>
+                <Label> Cheese
                     <input 
                         type='checkbox'
                         name='cheese'
                         onChange={onChange}
                         checked={values.cheese}
                     />
-                </label>
-                <label> Tomatoes
+                </Label>
+                <Label> Tomatoes
                     <input 
                         type='checkbox'
                         name='tomatoes'
                         onChange={onChange}
                         checked={values.tomatoes}
                     />
-                </label>
-                <label> Sauce
+                </Label>
+                <Label> Sauce
                     <input 
                         type='checkbox'
                         name='sauce'
                         onChange={onChange}
                         checked={values.sauce}
                     />
-                </label>
-                <label> Special Instructions?
+                </Label>
+                <H2>Special Instructions?</H2>
+                <Label> 
                     <input
                         value={values.instruct}
                         onChange={onChange}
@@ -99,11 +94,29 @@ function Pizza(props) {
                         type='text'
                         placeholder='We are listening'
                     />
-                </label>
+                    <H2>Finished?</H2>
+                </Label>
                 <button id="orderBtn">Add to Order</button>
             </div>
-        </form> 
+        </Form> 
     )
 }
-
 export default Pizza
+
+const Form = styled.form`
+background:#292210;
+height: 100vh;
+`
+
+const H1 = styled.h1`
+color: goldenrod;
+font-size: 4rem;
+`
+const H2 = styled.h2`
+color: goldenrod;
+font-size: 2.5rem;
+`
+const Label = styled.label`
+color: grey;
+font-size: 1.2rem;
+`

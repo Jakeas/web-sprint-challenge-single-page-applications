@@ -5,7 +5,7 @@ function PizzaDetails(props) {
 
     return (
         <div>
-            <h1>Steampunk Pizza</h1>
+            <h1>The Pizza Factory</h1>
             <h2>Order Details</h2>
             <h3>{details.first_name}</h3>
 

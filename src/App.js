@@ -70,18 +70,8 @@ const initialFormValues = {
       postNewData(newData)
     }
 
-    // useEffect(() => {
-
-    // })
-
-    // useEffect(() => {
-    //   formSchema.isValid(formValues).then(valid =>)
-    // })
-
-  
-
   return (
-    // <Router>
+    
       <div>
         <Switch>
           <Route path="/pizza">

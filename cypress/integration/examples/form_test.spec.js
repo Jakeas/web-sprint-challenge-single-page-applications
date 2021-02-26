@@ -41,6 +41,4 @@ describe('Pizza Website', () => {
     })
 }) 
 
-//- [ ] test that 
-//- [ ] test that 
-//- [ ] test that 
+ 

@@ -8,13 +8,18 @@ function PizzaDetails(props) {
             <h1>Steampunk Pizza</h1>
             <h2>Order Details</h2>
             <h3>{details.first_name}</h3>
-            <p>size: {details.size}</p>
+
+            <p>Size: {details.size}</p>
+
             <p>Special Instructions: {details.instruct}</p>
             
     {
         !!details.toppings && !!details.toppings.length &&
-        <p>Toppings Selected: {details.toppings.map((like, idx) => <span key={idx}>{like}</span>)}
-        </p>
+        <div> Toppings Selected: 
+            <ul>
+                {details.toppings.map((like, idx) => <li key={idx}>{like }</li> )}
+            </ul>
+        </div>
     }
         </div>
     )

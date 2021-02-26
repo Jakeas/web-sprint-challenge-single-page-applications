@@ -64,6 +64,7 @@ const initialFormValues = {
       const newData = {
         first_name: formValues.first_name.trim(),
         size: formValues.size,
+        instruct: formValues.instruct.trim(),
         toppings: ['sauce', 'cheese', 'mushrooms', 'tomatoes'].filter(topping => formValues[topping])
       }
       postNewData(newData)

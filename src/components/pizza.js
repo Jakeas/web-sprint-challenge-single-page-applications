@@ -6,6 +6,7 @@ function Pizza(props) {
 
     const { values, change, submit, errors } = props
 
+
     const onSubmit = evt => {
         evt.preventDefault()
         submit()
@@ -31,11 +32,11 @@ function Pizza(props) {
                 <h2>Pizza Preferences</h2>
             </div>
             <div >
-            {/* <div>
+            <div>
                 <div>{errors.first_name}</div>
                 <div>{errors.size}</div>
                 <div>{errors.instruct}</div>
-            </div> */}
+            </div>
                 <label>First Name
                     <input
                         type='text'
@@ -46,7 +47,7 @@ function Pizza(props) {
                 </label>
                 <label>
                     <select
-                        name='first_name'
+                        name='size'
                         onChange={onChange}
                         value={values.size}>
                     
@@ -99,13 +100,7 @@ function Pizza(props) {
                         placeholder='We are listening'
                     />
                 </label>
-                <button>Submit</button>
-                <Switch>
-                    {/* <Route path="/Confirm">
-                      <Confirm />   
-                    </Route> */}
-                </Switch>
-               
+                <button id="orderBtn">Add to Order</button>
             </div>
         </form> 
     )
